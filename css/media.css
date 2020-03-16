@@ -272,6 +272,9 @@
     {
         justify-content : space-around;
     }
+    .header_line {
+        padding : 0;
+    }
 }
 
 
@@ -1020,6 +1023,12 @@
 
 @media only screen and (max-width : 400px)
 {
+    .container {
+        padding : 0;
+    }
+    .header_menu {
+        padding : 0 10px 15px 10px;
+    }
     .header_menu ul li a
     {
         font-size : 10px;
