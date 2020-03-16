@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<!--suppress XmlDuplicatedId -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="libs/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+    <style type="text/css">
+        .btn-menu
+        {
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <div class="header_line">
+            <div class="menu">
+                <div class="humburger">
+                    <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+                    <label class="btn-menu" for="hmt">
+                        <div class="close-btn">
+                            <p><img src="img/icons/humburger_menu.png" alt=""></p>
+                        </div>
+                        <div class="close-btn-second">
+                            <span class="first"></span>
+                            <span class="second"></span>
+                            <span class="third"></span>
+                        </div>
+                    </label>
+                    <ul class="hidden-menu">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Доставка|Самовывоз</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <ul class="menu_l">
+                    <li>
+                        <a href="#">Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Доставка|Самовывоз
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Оплата
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Гарантия
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu_r">
+                    <li>
+                        <a href="#">Вход | Регистрация
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/user.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_menu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/logo.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/map.png" alt="">
+                        <form action="#" method="post">
+                            <div class="select">
+                                <a href="javascript:void(0);" class="slct arrow_href">
+                                    <span>Москва: Проектируемый проезд № 4294, 19, стр. 11</span>
+                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                </a>
+                                <ul class="drop">
+                                    <li>
+                                        <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                    </li>
+                                </ul>
+                                <input type="hidden" id="select"/>
+                            </div>
+                        </form>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+7 (495) 109 05 10">
+                        <img src="img/icons/phone.png" alt="">
+                        <p>+7 (495) 109 05 10</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/heart.png" alt="">
+                        <p>Избранное</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/comp.png" alt="">
+                        <p>Сравнения</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/bag.png" alt="">
+                        <p>Корзина</p>
+                        <p class="bag_quanity">0</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row_p mobile_view">
+            <div class="mobileHat">
+                <div class="mobile_filtr">
+                    <div id="fltr_open">
+                        <a class="filtr_button" href="javascript:change_visibility ('fltr_close', 'fltr_open')">
+                            <img src="img/icons/filter.png" alt=""> Фильтр
+                        </a>
+                    </div>
+                    <div id="fltr_close" style="display:none">
+                        <a class="filtr_button" href="javascript: – vp_arth" onClick="change_visibility ('fltr_open',
+                        'fltr_close')">
+                            <img src="img/icons/filter.png" alt=""> Фильтр
+                        </a>
+                        <ul class="left_bar_first">
+                            <li class="had_filtr">
+                                <div id="changeText">
+                                    <p><span>Подбор</span> <span>по</span> размеру</p>
+                                    <p class="second_txt"><span>Подбор</span> <span>по</span> авто</p>
+                                </div>
+                                <p class="switch_off" onclick="myFunction(), change_text()"><span></span></p>
+                            </li>
+                            <div id="inSize" class="inSize_no">
+                                <li class="inSize_view">
+                                    <form action="#" method="post">
+                                        <div class="select_two">
+                                            <a href="javascript:void(0);" class="slct_two arrow_href">
+                                                <span>Диски</span>
+                                                <img src="img/icons/arrow.png" alt="" class="arrow">
+                                            </a>
+                                            <ul class="drop_two">
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                            </ul>
+                                            <input type="hidden" id="select"/>
+                                        </div>
+                                    </form>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Ширина">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Диаметр">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Крепеж">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Вылет">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="ЦО (Dia)">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Диски">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Марка Вашего авто">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Модель Вашего авто">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Объем двигателя">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Год выпуска">
+                                    </label>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobileHat_r">
+                    <div class="mobile_tyre">
+                        <a href="#">
+                            <img src="img/icons/tires.png" alt="">
+                            <p>Пункт выдачи|Шиномонтаж</p>
+                        </a>
+                    </div>
+                    <div class="mobile_burger">
+                        <div class="catalog-menu">
+                            <input type="checkbox" id="hmt-1" class="hidden-menu-ticker-1">
+                            <label class="btn-menu-1" for="hmt-1">
+                                <div class="close-btn-1">
+                                    <p><img src="img/icons/humburger.png" alt=""></p>
+                                </div>
+                                <div class="close-btn-2">
+                                    <span class="first-1"></span>
+                                    <span class="second-1"></span>
+                                    <span class="third-1"></span>
+                                </div>
+                            </label>
+                            <ul class="hidden-menu-1">
+                                <ul class="left_bar_second">
+                                    <li class="hat">
+                                        <img src="img/icons/burger.png" alt="">
+                                        <p>Каталог</p>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_three">
+                                                <a href="javascript:void(0);" class="slct_three arrow_href">
+                                                    <span>Шины легковые</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_three">
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                </ul>
+                                                <input type="hidden" id="select"/>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_four">
+                                                <a href="javascript:void(0);" class="slct_four arrow_href">
+                                                    <span>Грузовые шины</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_four">
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                </ul>
+                                                <input type="hidden" id="select"/>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_five">
+                                                <a href="javascript:void(0);" class="slct_five arrow_href">
+                                                    <span>Индустриальные шины</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_five">
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                </ul>
+                                                <input type="hidden" id="select"/>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_six">
+                                                <a href="javascript:void(0);" class="slct_six arrow_href">
+                                                    <span>Колесные диски</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_six">
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                </ul>
+                                                <input type="hidden" id="select"/>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <a href="#">Масла</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аккумуляторы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акссесуары</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Прочие товары</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left_bar">
+                <ul class="left_bar_first">
+                    <li class="had_filtr">
+                        <img src="img/icons/filter.png" alt="">
+                        <div id="changeText">
+                            <p><span>Подбор</span> <span>по</span> размеру</p>
+                            <p class="second_txt"><span>Подбор</span> <span>по</span> авто</p>
+                        </div>
+                        <p class="switch_off" onclick="myFunction(), change_text()"><span></span></p>
+                    </li>
+                    <div id="inSize" class="inSize_no">
+                        <li class="inSize_view">
+                            <form action="#" method="post">
+                                <div class="select_two">
+                                    <a href="javascript:void(0);" class="slct_two arrow_href">
+                                        <span>Диски</span>
+                                        <img src="img/icons/arrow.png" alt="" class="arrow">
+                                    </a>
+                                    <ul class="drop_two">
+                                        <li><a href="javascript:void(0)">Диски</a></li>
+                                        <li><a href="javascript:void(0)">Диски</a></li>
+                                        <li><a href="javascript:void(0)">Диски</a></li>
+                                        <li><a href="javascript:void(0)">Диски</a></li>
+                                    </ul>
+                                    <input type="hidden" id="select"/>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="inSize_view">
+                            <label>
+                                <input type="text" placeholder="Ширина">
+                            </label>
+                        </li>
+                        <li class="inSize_view">
+                            <label>
+                                <input type="text" placeholder="Диаметр">
+                            </label>
+                        </li>
+                        <li class="inSize_view">
+                            <label>
+                                <input type="text" placeholder="Крепеж">
+                            </label>
+                        </li>
+                        <li class="inSize_view">
+                            <label>
+                                <input type="text" placeholder="Вылет">
+                            </label>
+                        </li>
+                        <li class="inSize_view">
+                            <label>
+                                <input type="text" placeholder="ЦО (Dia)">
+                            </label>
+                        </li>
+                        <li class="byCar_view">
+                            <label>
+                                <input type="text" placeholder="Диски">
+                            </label>
+                        </li>
+                        <li class="byCar_view">
+                            <label>
+                                <input type="text" placeholder="Марка Вашего авто">
+                            </label>
+                        </li>
+                        <li class="byCar_view">
+                            <label>
+                                <input type="text" placeholder="Модель Вашего авто">
+                            </label>
+                        </li>
+                        <li class="byCar_view">
+                            <label>
+                                <input type="text" placeholder="Объем двигателя">
+                            </label>
+                        </li>
+                        <li class="byCar_view">
+                            <label>
+                                <input type="text" placeholder="Год выпуска">
+                            </label>
+                        </li>
+                    </div>
+                </ul>
+                <ul class="left_bar_second">
+                    <li class="hat">
+                        <img src="img/icons/burger.png" alt="">
+                        <p>Каталог</p>
+                    </li>
+                    <li>
+                        <form action="#" method="post">
+                            <div class="select_three">
+                                <a href="javascript:void(0);" class="slct_three arrow_href">
+                                    <span>Шины легковые</span>
+                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                </a>
+                                <ul class="drop_three">
+                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                </ul>
+                                <input type="hidden" id="select"/>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="#" method="post">
+                            <div class="select_four">
+                                <a href="javascript:void(0);" class="slct_four arrow_href">
+                                    <span>Грузовые шины</span>
+                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                </a>
+                                <ul class="drop_four">
+                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                </ul>
+                                <input type="hidden" id="select"/>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="#" method="post">
+                            <div class="select_five">
+                                <a href="javascript:void(0);" class="slct_five arrow_href">
+                                    <span>Индустриальные шины</span>
+                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                </a>
+                                <ul class="drop_five">
+                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                </ul>
+                                <input type="hidden" id="select"/>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="#" method="post">
+                            <div class="select_six">
+                                <a href="javascript:void(0);" class="slct_six arrow_href">
+                                    <span>Колесные диски</span>
+                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                </a>
+                                <ul class="drop_six">
+                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                </ul>
+                                <input type="hidden" id="select"/>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <a href="#">Масла</a>
+                    </li>
+                    <li>
+                        <a href="#">Аккумуляторы</a>
+                    </li>
+                    <li>
+                        <a href="#">Акссесуары</a>
+                    </li>
+                    <li>
+                        <a href="#">Прочие товары</a>
+                    </li>
+                </ul>
+                <ul class="banner_first">
+                    <li>
+                        <img src="img/banners/banner_first.png" alt="">
+                    </li>
+                </ul>
+                <ul class="banner_second">
+                    <li>
+                        <img src="img/banners/banner_second.png" alt="">
+                        <p>Бесплатная доставка в регионы</p>
+                    </li>
+                    <li>
+                        <img src="img/banners/banner_third.png" alt="">
+                        <p>Зимние шины марки Michelin со скидкой 10%</p>
+                    </li>
+                    <li>
+                        <img src="img/banners/banner_four.png" alt="">
+                        <p>Расширенная гарантия</p>
+                    </li>
+                    <li>
+                        <img src="img/banners/banner_second.png" alt="">
+                        <p>Бесплатная доставка в регионы</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_bar">
+                <div class="nav">
+                    <ul class="nav_l">
+                        <li>
+                            <a href="#" class="nav_hov">Шины
+                                <img class="arrow_white" src="img/icons/arrow_white.png" alt=""></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">first</a>
+                                </li>
+                                <li>
+                                    <a href="#">second</a>
+                                </li>
+                                <li>
+                                    <a href="#">third</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav_hov_second">Диски
+                                <img class="arrow_white_second" src="img/icons/arrow_white.png" alt=""></a>
+                            <ul class="dropdown_second">
+                                <li>
+                                    <a href="#">Литые</a>
+                                </li>
+                                <li>
+                                    <a href="#">Штампованные</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tab_none_four">
+                            <a href="#">Масла</a>
+                        </li>
+                        <li class="tab_none_three">
+                            <a href="#">Акссесуары</a>
+                        </li>
+                        <li class="tab_none_two">
+                            <a href="#">Акции</a>
+                        </li>
+                        <li class="tab_none">
+                            <a href="#">Покупателям</a>
+                        </li>
+                        <li class="tab_vision arrow_menu">
+                            <a href="#" class="nav_hov_menu">
+                                <img src="img/icons/arrow_menu.png" alt="">
+                            </a>
+                            <ul class="dropdown_menu">
+                                <li class="tab_vision_four">
+                                    <a href="#">Масла</a>
+                                </li>
+                                <li class="tab_vision_three">
+                                    <a href="#">Акссесуары</a>
+                                </li>
+                                <li class="tab_vision_two">
+                                    <a href="#">Акции</a>
+                                </li>
+                                <li>
+                                    <a href="#">Покупателям</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="search_tab">
+                            <a href="#" class="search">
+                                <img src="img/icons/serach.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav_r">
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/tires.png" alt="">
+                                <p>Пункт выдачи <span>|</span><span>Шиномонтаж</span></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <div class="main_banners">
+                        <img src="img/banners/banner_five.png" alt="">
+                    </div>
+                    <div class="main_hits">
+                        <p class="title">Хиты продаж шин</p>
+                        <div class="navigation">
+                        </div>
+                        <div class="owl-carousel owl-carousel-1 owl-theme">
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <div class="sign sign_one">
+                                            <img src="img/icons/tyre.png" alt="">
+                                            <div class="sign_block sign_block_one">
+                                                <p>
+                                                    Дисконт 10%
+                                                    <span>Описание условий акции</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="sign sign_two">
+                                            <img src="img/icons/tire.png" alt="">
+                                            <div class="sign_block sign_block_two">
+                                                <p>
+                                                    Дисконт 10%
+                                                    <span>Описание условий акции</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="sign sign_three">
+                                            <img src="img/icons/sign.png" alt="">
+                                            <div class="sign_block sign_block_three">
+                                                <p>
+                                                    Дисконт 10%
+                                                    <span>Описание условий акции</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="sign sign_four">
+                                            <img src="img/icons/discount.png" alt="">
+                                            <div class="sign_block sign_block_four">
+                                                <p>
+                                                    Дисконт 10%
+                                                    <span>Описание условий акции</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="sign sign_five">
+                                            <img src="img/icons/snowflake.png" alt="">
+                                        </div>
+                                        <div class="sign sign_six">
+                                            <img src="img/icons/sign_second.png" alt="">
+                                        </div>
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <div class="sign sign_seven">
+                                            <img src="img/icons/sunny.png" alt="">
+                                        </div>
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>5</span>
+                                        </p>
+                                        <p class="availability avail_no">Нет в наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" main_hits main_hits_disks">
+                        <p class="title">Хиты продаж дисков</p>
+                        <div class="navigation_2">
+                        </div>
+                        <div class="owl-carousel owl-carousel-2 owl-theme">
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>2700₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_third.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск Carwel Неро 133</p>
+                                        <p>Бренд: Carwel литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>2880₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_four.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск Carwel Буссе 164 </p>
+                                        <p>Бренд: Nokian Hakkapelitta <span>Артикул: 01234873</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>5</span>
+                                        </p>
+                                        <p class="availability avail_no">Нет в наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>4800₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" main_hits main_hits_view">
+                        <p class="title">Вы недавно смотрели</p>
+                        <div class="navigation_3">
+                        </div>
+                        <div class="owl-carousel owl-carousel-3 owl-theme">
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>2700₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_five.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Масло 5w40 (4 л)</p>
+                                        <p>Бренд: Mobil
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>1880₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_six.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Чехлы на колеса</p>
+                                        <p>Бренд: -
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>5</span>
+                                        </p>
+                                        <p class="availability avail_no">Нет в наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>1800₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_seven.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16</p>
+                                        <p>Бренд: Nokian Hakkapelitta
+                                            <span>Артикул: 01234873</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span></p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>2700₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_five.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Масло 5w40 (4 л)</p>
+                                        <p>Бренд: Mobil
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>1880₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_six.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Чехлы на колеса</p>
+                                        <p>Бренд: -
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>5</span>
+                                        </p>
+                                        <p class="availability avail_no">Нет в наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>1800₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_seven.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_first.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Автошина 195/60 R16</p>
+                                        <p>Бренд: Nokian Hakkapelitta
+                                            <span>Артикул: 01234873</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="good">
+                                    <div class="item_img">
+                                        <img src="img/goods/goods_second.png" alt="">
+                                    </div>
+                                    <div class="item_text">
+                                        <p>Диск X'trike 15800</p>
+                                        <p>Бренд: X'trike литой
+                                            <span>Артикул: 0002563</span>
+                                        </p>
+                                    </div>
+                                    <div class="item_star">
+                                        <p class="stars">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star.png" alt="">
+                                            <img src="img/icons/star_empty.png" alt="">
+                                            <span>4</span>
+                                        </p>
+                                        <p class="availability">В наличии</p>
+                                    </div>
+                                    <div class="item_price">
+                                        <p>11 470₽</p>
+                                    </div>
+                                    <div class="item_button">
+                                        <a href="#" class="button">В корзину</a>
+                                        <a href="#">
+                                            <img src="img/icons/comp_second.png" alt="">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/icons/heart_second.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="title">Выбор покупателя наиболее популярные производители</p>
+                </div>
+            </div>
+        </div>
+        <div class="row .row_p">
+            <div class="brands">
+                <div class="navigation_4"></div>
+                <div class="owl-carousel owl-carousel-4 owl-theme">
+                    <div class="item">
+                        <img src="img/brands/brand_one.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_two.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_three.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_four.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_five.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_one.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_two.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_three.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_four.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/brands/brand_five.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="line_footer"></div>
+        <div class="footer">
+            <div class="footer_main">
+                <ul>
+                    <li>
+                        <a href="#">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="#">Шины легковые</a>
+                    </li>
+                    <li>
+                        <a href="#">Грузовые шины</a>
+                    </li>
+                    <li>
+                        <a href="#">Индустриальные шины</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Наши предложения</a>
+                    </li>
+                    <li>
+                        <a href="#">Каталог товаров</a>
+                    </li>
+                    <li>
+                        <a href="#">Распродажа</a>
+                    </li>
+                    <li>
+                        <a href="#">Новинки</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Помощь и сервисы</a>
+                    </li>
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="#">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="img/icons/logo_futer.png" alt="">
+                    </li>
+                    <li>
+                        <a href="#">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                    </li>
+                    <li class="social">
+                        <a href="#">
+                            <img src="img/icons/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/facebook.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/telegram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/vk.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="tel:+7 (495) 109-05-10">+7 (495) 109-05-10</a>
+                    </li>
+                    <li>
+                        <a href="#">График работы</a>
+                    </li>
+                    <li>
+                        <a href="#">Пн-Пт: с9:00 до 17:30</a>
+                    </li>
+                    <li>
+                        <a href="#">Сб, Вс: выходной</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="line_footer_bottom"></div>
+    </footer>
+</div>
+<!-- scripts -->
+<script type="text/javascript" src="libs/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="libs/OwlCarousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
