@@ -172,7 +172,6 @@ header
 {
     width           : 100%;
     height          : 40px;
-    padding         : 0 15px;
     display         : flex;
     justify-content : space-between;
     align-items     : center;
@@ -185,6 +184,7 @@ header
     height          : 100%;
     max-width       : 1440px;
     margin          : 0 auto;
+    padding : 0 15px;
     display         : flex;
     justify-content : space-between;
 }
@@ -282,7 +282,6 @@ header
 .slct img, .slct_two img, .slct_three img, .slct_four img, .slct_five img, .slct_six img
 {
     position     : relative;
-    padding-left : 9px;
 }
 
 .drop, .drop_two, .drop_three, .drop_four, .drop_five, .drop_six
@@ -349,10 +348,25 @@ header
     position    : relative;
 }
 
-.href_active .arrow
+.header_menu ul li:nth-of-type(2) {
+    position : relative;
+    padding-right : 20px;
+}
+.select_header .arrow_one{
+    position : absolute;
+    top: calc(50% - 8px);
+    right: 0px;
+    width : 20px;
+    height : 6px;
+    padding-left : 9px;
+}
+.select_header .href_active_one
 {
-    padding   : 0 9px 0 0;
+    right: -10px;
     transform : rotate(180deg);
+}
+.href_active .arrow {
+    transform: rotate(180deg);
 }
 
 .header_menu ul li a
@@ -518,7 +532,7 @@ footer {
     padding : 0;
 }
 
-.left_bar_first li:nth-of-type(1) img
+.left_bar_first .had_filtr img
 {
     padding-right : 9px;
 }
@@ -564,6 +578,13 @@ footer {
 .in_size .byCar_view {
     display: block;
 }
+.in_size .byCar_one {
+    height : auto;
+    padding : 0;
+}
+/*.byCar_one .slct_two {*/
+/*    padding : 0;*/
+/*}*/
 .second_txt {
     display: none;
 }
@@ -841,10 +862,11 @@ display: inline-block;
     top              : 100%;
     width            : 231px;
     left             : -20px;
-    padding          : 30px 26px;
+    padding          : 30px 26px 5px 26px;
     border-top       : none;
     box-shadow       : 0 0 10px 0 rgba(0, 0, 0, 0.3);
     background-color : rgb(255, 255, 255);
+    z-index : 2;
 }
 
 .dropdown, .dropdown_second, .dropdown_menu
@@ -923,6 +945,7 @@ display: inline-block;
 
 .main_banners
 {
+    position : relative;
     padding-top : 11px;
 }
 .main_banners img {
@@ -950,15 +973,18 @@ display: inline-block;
     color       : rgb(51, 51, 51);
 }
 
-.navigation, .navigation_2, .navigation_3, .navigation_4
+.navigation, .navigation_2, .navigation_3, .navigation_4, .navigation_5, .navigation_6, .navigation_7
 {
     position        : absolute;
-    top             : 40%;
+    top             : calc(50% - 12px);
     width           : 100%;
     display         : flex;
     justify-content : space-between;
+    z-index : 4;
 }
-
+.navigation_7 {
+    top             : calc(50% - 24px);
+}
 .owl-prev, .owl-next
 {
     position : absolute;
@@ -971,21 +997,43 @@ display: inline-block;
     right : -25px;
 
 }
+.navigation_7 .owl-next, .navigation_7 .owl-prev {
+    background-image: url("../img/icons/arrow_slide_l.png");
+    background-size: cover;
+    background-color: transparent;
+    width : 48px;
+    height : 48px;
+    left: 0;
+    right: 0;
+}
 
+.navigation_7 .owl-next{
+    background-image: url("../img/icons/arrow_slide_r.png");
+    background-size: cover;
+    width : 48px;
+    height : 48px;
+    left: auto;
+    right: 0;
+}
 .owl-prev
 {
     left : -25px;
 }
 .navigation_4 .owl-prev {
-    left: -50px;
+    left: -25px;
 }
 .navigation_4 .owl-next
 {
-    right : 50px;
+    right : 75px;
     z-index : 10;
 
 }
-
+.brands .item {
+    display: flex;
+    align-items: center;
+    height : 65px;
+    margin : 0 33px;
+}
 .item
 {
     position : relative;
@@ -1206,11 +1254,6 @@ display: inline-block;
     max-height : 20px;
 }
 
-.item_button a:nth-of-type(2) img
-{
-    max-width  : 17px;
-    max-height : 14px;
-}
 .main_hits_disks, .main_hits_view {
     padding-top : 15px;
 }
@@ -1221,4 +1264,44 @@ display: inline-block;
     
 }
 /*INDEX END*/
+/*____________________________________________*/
+
+
+/*CARD*/
+.card_bar {
+    width : 100%;
+}
+.card_hits {
+    max-width: 1320px;
+}
+.breadcrumb {
+    display: flex;
+}
+.breadcrumb li a, .breadcrumb li span{
+    font-family: Gilroy, serif;
+    font-size : 10px;
+    color: rgb(51, 51, 51);
+}
+.breadcrumb li span {
+    margin-right : 5px;
+}
+.card_top {
+    padding-top : 15px;
+    display: flex;
+}
+.card_top_l {
+    padding-left : 53px;
+}
+.card_top_r {
+    padding-left : 84px;
+}
+.card_top_r ul li:nth-of-type(1) {
+    display: flex;
+}
+.card_top_r ul li:nth-of-type(1) img {
+    width : 28px;
+    height : 28px;
+    margin-right : 3px;
+}
+/*CARD END*/
 /*____________________________________________*/

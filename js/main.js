@@ -33,6 +33,9 @@ return false;
 jQuery('.arrow_href').click(function(){
     jQuery(this).toggleClass('href_active');
 });
+jQuery('.arrow_href_one').click(function(){
+    jQuery('.arrow_one').toggleClass('href_active_one');
+});
 // Select_two
 $('.slct_two').click(function(){
     /* Заносим выпадающий список в переменную */
@@ -202,6 +205,14 @@ function change_text() {
   var element = document.getElementById("changeText");
   element.classList.toggle("change_text");
 }
+function myFunctionTwo() {
+  var element = document.getElementById("inSize_mob");
+  element.classList.toggle("in_size");
+}
+function change_textTwo() {
+  var element = document.getElementById("changeText_mob");
+  element.classList.toggle("change_text");
+}
 // OWL-CAROUSEL
 // $(document).ready(function(){
 //   $(".owl-carousel").owlCarousel();
@@ -325,8 +336,67 @@ $('.owl-carousel-4').owlCarousel({
         }
     }
 })
-
-
+$('.owl-carousel-5').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    responsiveClass:true,
+    navContainer: ".navigation_5",
+    navText: ["<img src='img/icons/arrow_l.png'>", "<img src='img/icons/arrow_r.png'>"],
+    responsive:{
+        0:{
+            items:2,
+            nav:true
+        },
+        500:{
+            items:3,
+            nav:true
+        },
+        600:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+})
+$('.owl-carousel-6').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    responsiveClass:true,
+    navContainer: ".navigation_6",
+    navText: ["<img src='img/icons/arrow_l.png'>", "<img src='img/icons/arrow_r.png'>"],
+    responsive:{
+        0:{
+            items:2,
+            nav:true
+        },
+        500:{
+            items:3,
+            nav:true
+        },
+        600:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+})
+$('.owl-carousel-7').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    responsiveClass:true,
+    navContainer: ".navigation_7",
+    navText: ["", ""],
+    responsive:{
+        0:{
+            items:1,
+            nav:true,
+            loop:false
+        }
+    }
+})
 
 
 
@@ -334,3 +404,12 @@ function change_visibility (block_close, block_open) {
     document.getElementById(block_close).style.display='block';
     document.getElementById(block_open).style.display='none';
     }
+
+    $(function () {
+  $(document).click((e) => {
+    const {target} = e;
+    if(target.nodeName === 'A' && target.getAttribute('href') === '#') {
+      e.preventDefault();
+    }
+  });
+});
