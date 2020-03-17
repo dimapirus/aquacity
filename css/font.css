@@ -29,4 +29,11 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'OpenSansExtraBold';
+    src: url('../fonts/OpenSans/OpenSans-Extrabold.woff2') format('woff2'),
+        url('../fonts/OpenSans/OpenSans-Extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
 

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="libs/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<div class="page">
+    <header>
+        <div class="header_line">
+            <div class="menu">
+                <div class="humburger">
+                    <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+                    <label class="btn-menu" for="hmt">
+                        <div class="close-btn">
+                            <p><img src="img/icons/humburger_menu.png" alt=""></p>
+                        </div>
+                        <div class="close-btn-second">
+                            <span class="first"></span>
+                            <span class="second"></span>
+                            <span class="third"></span>
+                        </div>
+                    </label>
+                    <ul class="hidden-menu">
+                        <li><a href="main.html">Главная</a></li>
+                        <li><a href="#">Доставка|Самовывоз</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <ul class="menu_l">
+                    <li>
+                        <a href="main.html">Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Доставка|Самовывоз
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Оплата
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Гарантия
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu_r">
+                    <li>
+                        <a href="#">Вход | Регистрация
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icons/user.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_menu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/logo.png" alt="">
+                    </a>
+                </li>
+                <li class="select_header">
+                    <a href="#">
+                        <img src="img/icons/map.png" alt="">
+                    </a>
+                    <form action="#" method="post">
+                        <div class="select">
+                            <a href="javascript:void(0);" class="slct arrow_href_one">
+                                <span>Москва: Проектируемый проезд № 4294, 19, стр. 11</span>
+                            </a>
+                            <ul class="drop">
+                                <li>
+                                    <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                                </li>
+                            </ul>
+                            <!--                                <input type="hidden" id="select"/>-->
+                        </div>
+                    </form>
+                    <img src="img/icons/arrow.png" alt="" class="arrow_one">
+                </li>
+                <li>
+                    <a href="tel:+7 (495) 109 05 10">
+                        <img src="img/icons/phone.png" alt="">
+                        <p>+7 (495) 109 05 10</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/heart.png" alt="">
+                        <p>Избранное</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/comp.png" alt="">
+                        <p>Сравнения</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/icons/bag.png" alt="">
+                        <p>Корзина</p>
+                        <p class="bag_quanity">0</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row_p mobile_view">
+            <div class="mobileHat">
+                <div class="mobile_filtr">
+                    <div id="fltr_open">
+                        <a class="filtr_button" href="javascript:change_visibility ('fltr_close', 'fltr_open')">
+                            <img src="img/icons/filter.png" alt=""> Фильтр
+                        </a>
+                    </div>
+                    <div id="fltr_close" style="display:none">
+                        <a class="filtr_button" href="#" onClick="change_visibility ('fltr_open',
+                        'fltr_close')">
+                            <img src="img/icons/filter.png" alt=""> Фильтр
+                        </a>
+                        <ul class="left_bar_first">
+                            <li class="had_filtr">
+                                <div id="changeText_mob">
+                                    <p><span>Подбор</span> <span>по</span> размеру</p>
+                                    <p class="second_txt"><span>Подбор</span> <span>по</span> авто</p>
+                                </div>
+                                <p class="switch_off" onclick="myFunctionTwo(), change_textTwo()"><span></span></p>
+                            </li>
+                            <div id="inSize_mob" class="inSize_no">
+                                <li class="inSize_view inSize_width">
+                                    <form action="#" method="post">
+                                        <div class="select_two">
+                                            <a href="javascript:void(0);" class="slct_two arrow_href">
+                                                <span>Диски</span>
+                                                <img src="img/icons/arrow.png" alt="" class="arrow">
+                                            </a>
+                                            <ul class="drop_two">
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                            </ul>
+                                            <!--                                            <input type="hidden" id="select"/>-->
+                                        </div>
+                                    </form>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Ширина">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Диаметр">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Крепеж">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="Вылет">
+                                    </label>
+                                </li>
+                                <li class="inSize_view">
+                                    <label>
+                                        <input type="text" placeholder="ЦО (Dia)">
+                                    </label>
+                                </li>
+                                <li class="byCar_view byCar_one">
+                                    <form action="#" method="post">
+                                        <div class="select_two">
+                                            <a href="javascript:void(0);" class="slct_two arrow_href">
+                                                <span>Диски</span>
+                                                <img src="img/icons/arrow.png" alt="" class="arrow">
+                                            </a>
+                                            <ul class="drop_two">
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                                <li><a href="javascript:void(0)">Диски</a></li>
+                                            </ul>
+                                            <!--                                    <input type="hidden" id="select"/>-->
+                                        </div>
+                                    </form>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Марка Вашего авто">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Модель Вашего авто">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Объем двигателя">
+                                    </label>
+                                </li>
+                                <li class="byCar_view">
+                                    <label>
+                                        <input type="text" placeholder="Год выпуска">
+                                    </label>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobileHat_r">
+                    <div class="mobile_tyre">
+                        <a href="#">
+                            <img src="img/icons/tires.png" alt="">
+                            <p>Пункт выдачи|Шиномонтаж</p>
+                        </a>
+                    </div>
+                    <div class="mobile_burger">
+                        <div class="catalog-menu">
+                            <input type="checkbox" id="hmt-1" class="hidden-menu-ticker-1">
+                            <label class="btn-menu-1" for="hmt-1">
+                                <div class="close-btn-1">
+                                    <p><img src="img/icons/humburger.png" alt=""></p>
+                                </div>
+                                <div class="close-btn-2">
+                                    <span class="first-1"></span>
+                                    <span class="second-1"></span>
+                                    <span class="third-1"></span>
+                                </div>
+                            </label>
+                            <div class="hidden-menu-1">
+                                <div class="left_bar_second">
+                                    <li class="hat">
+                                        <img src="img/icons/burger.png" alt="">
+                                        <p>Каталог</p>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_three">
+                                                <a href="javascript:void(0);" class="slct_three arrow_href">
+                                                    <span>Шины легковые</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_three">
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                    <li><a href="javascript:void(0)">Шины легковые</a></li>
+                                                </ul>
+                                                <input type="hidden" id="select"/>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_four">
+                                                <a href="javascript:void(0);" class="slct_four arrow_href">
+                                                    <span>Грузовые шины</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_four">
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                    <li><a href="javascript:void(0)">Грузовые шины</a></li>
+                                                </ul>
+                                                <!--                                                <input type="hidden" id="select"/>-->
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_five">
+                                                <a href="javascript:void(0);" class="slct_five arrow_href">
+                                                    <span>Индустриальные шины</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_five">
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                    <li><a href="javascript:void(0)">Индустриальные шины</a></li>
+                                                </ul>
+                                                <!--                                                <input type="hidden" id="select"/>-->
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form action="#" method="post">
+                                            <div class="select_six">
+                                                <a href="javascript:void(0);" class="slct_six arrow_href">
+                                                    <span>Колесные диски</span>
+                                                    <img src="img/icons/arrow.png" alt="" class="arrow">
+                                                </a>
+                                                <ul class="drop_six">
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                    <li><a href="javascript:void(0)">Колесные диски</a></li>
+                                                </ul>
+                                                <!--                                                <input type="hidden" id="select"/>-->
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <a href="#">Масла</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аккумуляторы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Акссесуары</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Прочие товары</a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_bar basket">
+                <div class="nav">
+                    <ul class="nav_l">
+                        <li>
+                            <a href="#" class="nav_hov">Шины
+                                <img class="arrow_white" src="img/icons/arrow_white.png" alt=""></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">first</a>
+                                </li>
+                                <li>
+                                    <a href="#">second</a>
+                                </li>
+                                <li>
+                                    <a href="#">third</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav_hov_second">Диски
+                                <img class="arrow_white_second" src="img/icons/arrow_white.png" alt=""></a>
+                            <ul class="dropdown_second">
+                                <li>
+                                    <a href="#">Литые</a>
+                                </li>
+                                <li>
+                                    <a href="#">Штампованные</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tab_none_four">
+                            <a href="#">Масла</a>
+                        </li>
+                        <li class="tab_none_three">
+                            <a href="#">Акссесуары</a>
+                        </li>
+                        <li class="tab_none_two">
+                            <a href="#">Акции</a>
+                        </li>
+                        <li class="tab_none">
+                            <a href="#">Покупателям</a>
+                        </li>
+                        <li class="tab_vision arrow_menu">
+                            <a href="#" class="nav_hov_menu">
+                                <img src="img/icons/arrow_menu.png" alt="">
+                            </a>
+                            <ul class="dropdown_menu">
+                                <li class="tab_vision_four">
+                                    <a href="#">Масла</a>
+                                </li>
+                                <li class="tab_vision_three">
+                                    <a href="#">Акссесуары</a>
+                                </li>
+                                <li class="tab_vision_two">
+                                    <a href="#">Акции</a>
+                                </li>
+                                <li>
+                                    <a href="#">Покупателям</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="search_tab">
+                            <a href="#" class="search">
+                                <img src="img/icons/serach.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav_r">
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/tires.png" alt="">
+                                <p>Пункт выдачи <span>|</span><span>Шиномонтаж</span></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="index.html">Главная</a>
+                                <span class="breadcrumb__delimiter">></span>
+                            </li>
+                            <li>
+                                <a href="index.html">Каталог</a>
+                                <span class="breadcrumb__delimiter">></span>
+                            </li>
+                            <li>
+                                <a href="index.html">Шины</a>
+                                <span class="breadcrumb__delimiter">></span>
+                            </li>
+                            <li>
+                                <a href="index.html">Nokian</a>
+                                <span class="breadcrumb__delimiter">></span>
+                            </li>
+                            <li>
+                                <a href="index.html">Hakkapeliitta 9 SUV</a>
+                                <span class="breadcrumb__delimiter">></span>
+                            </li>
+                            <li>
+                                265/70 R15 115T
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="order">
+                            <p class="title title_third">Оформление заказа</p>
+                            <div class="order_table">
+                                <div class="table">
+                                    <ul class="string">
+                                        <li>Фото</li>
+                                        <li>Артикул</li>
+                                        <li>Наименование товара</li>
+                                        <li>Цена</li>
+                                        <li>Количество</li>
+                                        <li>Скидка</li>
+                                        <li>Стоимость</li>
+                                        <li>Бонусы</li>
+                                        <li>Примечание</li>
+                                    </ul>
+                                    <ul class="string">
+                                        <li>
+                                            <img src="img/basket/basket_good.png" alt="">
+                                        </li>
+                                        <li>00003322</li>
+                                        <li>Achilles Desert Hawk UHP 235/55 R18 104V</li>
+                                        <li>16420₽</li>
+                                        <li>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <p>
+                                                    <input type="text" value="1" size="5"/>
+                                                    <span>шт.</span>
+                                                </p>
+                                                <span class="plus">+</span>
+                                            </div>
+                                        </li>
+                                        <li></li>
+                                        <li>65680₽</li>
+                                        <li></li>
+                                        <li>
+                                            <img src="img/icons/basket_close.png" alt="">
+                                        </li>
+                                    </ul>
+                                    <ul class="string">
+                                        <li>
+                                            <img src="img/basket/basket_good_two.png" alt="">
+                                        </li>
+                                        <li>00003322</li>
+                                        <li>Achilles Desert Hawk UHP 235/55 R18 104V</li>
+                                        <li>6420₽</li>
+                                        <li>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <p>
+                                                    <input type="text" value="1" size="5"/>
+                                                    <span>шт.</span>
+                                                </p>
+                                                <span class="plus">+</span>
+                                            </div>
+                                        </li>
+                                        <li></li>
+                                        <li>6420₽</li>
+                                        <li></li>
+                                        <li>
+                                            <img src="img/icons/basket_close.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="order_data">
+                                <div class="data_l">
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="radio" name="radio"/>
+                                            <label for="radio">ул. Новозаводская, д. 12 А</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio1" name="radio"/>
+                                            <label for="radio1">ул. Минская, д. 6/3</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio2" name="radio"/>
+                                            <label for="radio2">Волгоградский проспект, д. 37 А3</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio3" name="radio"/>
+                                            <label for="radio3">ул. Большая Филёвская, д. 53</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio4" name="radio"/>
+                                            <label for="radio4">ул. Рябиновая, д. 14</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio5" name="radio"/>
+                                            <label for="radio5">Боровское шоссе, д. 25 А</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio6" name="radio"/>
+                                            <label for="radio6">Очаковское шоссе, д. 40</label>
+                                        </li>
+                                        <li>
+                                            <p>О готовности выдачи заказа Вас оповестят СМС сообщением, так же за статусом заказа можно следить в личном кабинете</p>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p>Имя<span>*</span></p>
+                                            <input type="text" placeholder="Иван">
+                                        </li>
+                                        <li>
+                                            <p>Телефон<span>*</span></p>
+                                            <input type="number" placeholder="+79000000000">
+                                        </li>
+                                        <li>
+                                            <p> Адрес электронной почты<span>*</span></p>
+                                            <input type="E-mail" placeholder="E-mail">
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="check" name="check"/>
+                                            <label for="check">Зарегистрироваться</label>
+                                        </li>
+                                        <li>
+                                            <p>О готовности выдачи заказа Вас оповестят СМС сообщением, так же за статусом заказа можно следить в личном кабинете</p>
+                                        </li>
+                                    </ul>
+                                    <div class="comments">
+                                        <textarea name="comment" placeholder="Комментарий к заказу"></textarea>
+                                    </div>
+                                </div>
+                                <div class="data_r">
+                                    <ul>
+                                        <li class="promo">
+                                            <input type="text" placeholder="Промокод">
+                                            <a href="#" class="button_second">Применить</a>
+                                        </li>
+                                        <li>Способ оплаты</li>
+                                        <li>
+                                            <input type="radio" id="radio7" name="radio2"/>
+                                            <label for="radio7">Картой онлайн</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio8" name="radio2"/>
+                                            <label for="radio8">(картой или наличными)</label>
+                                        </li>
+                                        <li class="color_g">
+                                            <p>Скидка: 0₽</p>
+                                        </li>
+                                        <li class="color_g">
+                                            <p>Бонус баллы: 0</p>
+                                        </li>
+                                        <li class="color_g">
+                                            <p>Итого: 72 600₽</p>
+                                        </li>
+                                        <li class="color_g">
+                                            <a href="#" class="button">оформить заказ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="line_footer"></div>
+        <div class="footer">
+            <div class="footer_main">
+                <ul>
+                    <li>
+                        <a href="#">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="#">Шины легковые</a>
+                    </li>
+                    <li>
+                        <a href="#">Грузовые шины</a>
+                    </li>
+                    <li>
+                        <a href="#">Индустриальные шины</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Наши предложения</a>
+                    </li>
+                    <li>
+                        <a href="#">Каталог товаров</a>
+                    </li>
+                    <li>
+                        <a href="#">Распродажа</a>
+                    </li>
+                    <li>
+                        <a href="#">Новинки</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">Помощь и сервисы</a>
+                    </li>
+                    <li>
+                        <a href="main.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Доставка</a>
+                    </li>
+                    <li>
+                        <a href="#">Оплата</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="img/icons/logo_futer.png" alt="">
+                    </li>
+                    <li>
+                        <a href="#">Москва: Проектируемый проезд № 4294, 19, стр. 11</a>
+                    </li>
+                    <li class="social">
+                        <a href="#">
+                            <img src="img/icons/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/facebook.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/telegram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/vk.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="tel:+7 (495) 109-05-10">+7 (495) 109-05-10</a>
+                    </li>
+                    <li>
+                        <a href="#">График работы</a>
+                    </li>
+                    <li>
+                        <a href="#">Пн-Пт: с9:00 до 17:30</a>
+                    </li>
+                    <li>
+                        <a href="#">Сб, Вс: выходной</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="line_footer_bottom"></div>
+    </footer>
+</div>
+<!-- scripts -->
+<script type="text/javascript" src="libs/jquery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="libs/OwlCarousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

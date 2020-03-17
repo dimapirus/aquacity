@@ -1383,7 +1383,7 @@ rgb(51, 51, 51);
     display : flex;
 }
 
-.breadcrumb li a, .breadcrumb li span
+.breadcrumb li, .breadcrumb li a, .breadcrumb li span
 {
     font-family : Gilroy, serif;
     font-size   : 10px;
@@ -1397,15 +1397,15 @@ rgb(51, 51, 51);
 
 .title_second
 {
-    padding-top  : 0;
+    padding-top    : 0;
     padding-bottom : 0;
-    padding-left : 40px;
+    padding-left   : 40px;
 }
 
 .category_bar
 {
-    flex         : 1;
-    padding-left : 15px;
+    flex           : 1;
+    padding-left   : 15px;
     padding-bottom : 40px;
 }
 
@@ -1415,7 +1415,7 @@ rgb(51, 51, 51);
     display         : flex;
     justify-content : space-between;
     align-items     : center;
-    padding-bottom : 25px;
+    padding-bottom  : 25px;
 }
 
 .padding_none
@@ -1443,46 +1443,408 @@ rgb(51, 51, 51);
 
 .select_category p:nth-of-type(2)
 {
-    padding : 0;
-    border-right       : 1px solid rgb(200, 200, 200);
-    border-radius      : 0 5px 5px 0;
-    padding-left : 15px;
-    background-color: white;
+    padding          : 0;
+    border-right     : 1px solid rgb(200, 200, 200);
+    border-radius    : 0 5px 5px 0;
+    padding-left     : 15px;
+    background-color : white;
 }
-.select_category p select {
-    width : 100%;
-    height : 100%;
-    border: none;
+
+.select_category p select
+{
+    width             : 100%;
+    height            : 100%;
+    border            : none;
     webkit-appearance : none;
-    -moz-appearance    : none;
-    -ms-appearance     : none;
-    appearance         : none;
-    outline            : 0;
-    cursor:pointer;
-    background: white;
-     font-family   : Gilroy, serif;
-    font-size     : 16px;
-    color         : rgb(51, 51, 51);
+    -moz-appearance   : none;
+    -ms-appearance    : none;
+    appearance        : none;
+    outline           : 0;
+    cursor            : pointer;
+    background        : white;
+    font-family       : Gilroy, serif;
+    font-size         : 16px;
+    color             : rgb(51, 51, 51);
 }
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
+
+.categories
+{
+    display         : flex;
+    flex-wrap       : wrap;
+    align-items     : stretch;
+    justify-content : space-between;
 }
-.categories .item_text p:nth-of-type(2) span {
-    display: block;
+
+.categories .item_text p:nth-of-type(2) span
+{
+    display : block;
 }
-.categories .item {
-    width: 25%;
-    flex: 0 0 25%;
+
+.categories .item
+{
+    width         : 25%;
+    flex          : 0 0 25%;
     margin-bottom : 15px;
 }
-.categories .item .good {
+
+.categories .item .good
+{
     padding : 15px;
 }
-.categories .item .good:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+.categories .item .good:hover
+{
+    box-shadow : 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
+
 /*CATEGORIES END*/
+/*____________________________________________*/
+
+
+/*BASKET END*/
+.basket
+{
+    width : 100%;
+}
+
+.basket .nav_l
+{
+    padding         : 0 30px;
+    justify-content : flex-start;
+}
+
+.basket .nav_l a, .basket .nav_l li
+{
+    width : auto;
+}
+
+.basket .nav_l a
+{
+    padding : 0 15px;
+}
+
+.basket .nav_l li
+{
+    margin-right : 30px;
+}
+
+.basket .nav_l li:nth-last-of-type(1)
+{
+    margin-left  : auto;
+    margin-right : 0;
+}
+
+.title_third
+{
+    padding     : 16px 0 20px 0;
+    margin      : 0;
+    font-family : Gilroy, serif;
+    font-size   : 24px;
+    color       : rgb(51, 51, 51);
+}
+
+.order
+{
+    width : 100%;
+}
+
+.order_table
+{
+    width         : 100%;
+    border-top    : solid 1px rgb(51, 51, 51);
+    border-bottom : solid 1px rgb(51, 51, 51);
+    font-family   : Gilroy, serif;
+    font-size     : 14px;
+    color         : rgb(51, 51, 51);
+}
+
+.order_table .table,
+.order_table .table .string
+{
+    width : 100%;
+}
+
+.order_table .table .string
+{
+    display       : flex;
+    height        : 126px;
+    border-bottom : 1px solid rgb(51, 51, 51);
+}
+
+.order_table .table .string:nth-last-of-type(1)
+{
+    border : none;
+}
+
+.order_table .table .string li
+{
+    width           : 100%;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    border-right    : solid 1px rgb(186, 186, 186);
+}
+
+.order_table .table .string li:nth-last-of-type(1)
+{
+    border : none;
+}
+
+.order_table .table .string:nth-of-type(1)
+{
+    height        : 35px;
+    border-bottom : 2px solid rgb(51, 51, 51);
+}
+
+.order_table .table .string li:nth-of-type(3)
+{
+    min-width       : 487px;
+    justify-content : flex-start;
+    padding-left    : 46px;
+}
+
+.order_table .table .string li:nth-of-type(5)
+{
+    min-width : 110px;
+}
+
+.number
+{
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.number .minus, .number .plus
+{
+    font-family : Gilroy-Bold, serif;
+    font-size   : 19px;
+    color       : rgb(254, 51, 54);
+}
+
+.number p
+{
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : 60px;
+    margin          : 0 9px;
+    text-align      : center;
+    height          : 26px;
+    border          : solid 1px rgb(254, 51, 54);
+}
+
+.number p span
+{
+    margin-top : 1px;
+}
+
+.number p input
+{
+    max-width : 20px;
+}
+
+input[type=checkbox], input[type=radio]
+{
+    display : none;
+}
+
+input[type=radio] + label:before
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content        : "";
+    width          : 16px;
+    height         : 16px;
+    margin-right : 17px;
+    box-shadow     : 0 0 3px 0 rgba(0, 0, 0, 0.23);
+    border         : solid 1px rgb(99, 99, 99);
+    border-radius  : 50%;
+    display        : inline-block;
+    font-size      : 20px;
+    text-align     : center;
+    vertical-align : middle;
+    font-size      : 0;
+    transition     : font-size ease .3s;
+}
+
+input[type=radio]:checked + label:before
+{
+background: url("../img/icons/dot.png") no-repeat center;
+}
+label {
+    font-family: Gilroy, serif;
+    font-size : 16px;
+    color: rgb(51, 51, 51);
+}
+input[type=checkbox] + label:before {
+    content: " ";
+    color: transparent;
+    display: inline-block;
+    border: solid 1px rgb(51, 51, 51);
+    font-size: 20px;
+    font-weight: 900;
+    margin-right : 17px;
+    height: 12px;
+    width: 12px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+}
+
+input[type=checkbox]:checked + label:before {
+    background: url("../img/icons/checkbox.png") no-repeat center;
+}
+.order_data {
+    padding-top : 22px;
+    display: flex;
+}
+.data_l li {
+    padding-bottom : 17px;
+}
+.data_l ul  {
+    width : 50%;
+}
+.data_l .comments {
+    width : 100%;
+}
+.data_l ul:nth-of-type(1) li:nth-last-of-type(1) {
+    padding-top : 50px;
+}
+.data_l li:nth-last-of-type(1),
+.data_l ul:nth-of-type(2) li:nth-last-of-type(1) p{
+    max-width: 342px;
+    font-family: Gilroy;
+  font-size: 10px;
+    color: rgb(51, 51, 51);
+}
+.data_l {
+    display: flex;
+    width : 66.6666%;
+    justify-content: space-between;
+}
+.data_l li input::-webkit-input-placeholder
+{ /* Chrome/Opera/Safari */
+    font-family : Gilroy, serif;
+    font-size   : 14px;
+color: rgb(51, 51, 51);
+}
+
+.data_l li input::-moz-placeholder
+{ /* Firefox 19+ */
+    font-family : Gilroy, serif;
+    font-size   : 14px;
+color: rgb(51, 51, 51);
+}
+
+.data_l li input:-ms-input-placeholder
+{ /* IE 10+ */
+    font-family : Gilroy, serif;
+    font-size   : 14px;
+color: rgb(51, 51, 51);
+}
+
+.data_l li input:-moz-placeholder
+{ /* Firefox 18- */
+    font-family : Gilroy, serif;
+    font-size   : 14px;
+color: rgb(51, 51, 51);
+}
+.data_l li input {
+    width : 100%;
+    max-width: 352px;
+    height : 41px;
+    padding-left : 15px;
+    border: solid 1px rgb(51, 51, 51);
+    font-family : Gilroy, serif;
+    font-size   : 14px;
+color: rgb(51, 51, 51);
+}
+.data_l ul:nth-of-type(2) li p {
+    padding-bottom : 10px;
+    font-family : Gilroy, serif;
+    font-size   : 14px;
+    color: rgb(51, 51, 51);
+}
+.data_l ul:nth-of-type(2) li p span {
+    color: rgb(254, 51, 54);
+}
+.data_l ul:nth-of-type(2) li {
+    padding-bottom : 21px;
+}
+.data_l{
+    flex-wrap: wrap;
+}
+.data_r {
+    width : 33.3333%;
+}
+textarea {
+    padding : 15px;
+    width : 100%;
+    max-width: 806px;
+height: 96px;
+  border: solid 1px rgb(51, 51, 51);
+    resize: none;
+    font-family : Gilroy, serif;
+    font-size   : 14px;
+    color: rgb(51, 51, 51);
+}
+.promo {
+    display: flex;
+}
+.promo input{
+    padding : 0 10px;
+    margin-right : 7px;
+    width: 231px;
+  height: 40px;
+  border: solid 1px rgb(51, 51, 51);
+    font-family: Gilroy, serif;
+  font-size: 14px;
+    color: rgb(51, 51, 51);
+}
+.button_second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 114px;
+  height: 40px;
+  border: solid 1px rgb(254, 51, 54);
+    font-family: Gilroy, serif;
+  font-size: 14px;
+    color: rgb(254, 51, 54);
+}
+.data_r ul li {
+    max-width: 352px;
+    padding-bottom : 25px;
+}
+.data_r ul li label {
+    color: rgb(99, 99, 99);
+}
+.data_r ul li:nth-of-type(2) {
+    font-family: Gilroy, serif;
+  font-size: 14px;
+    color: rgb(51, 51, 51);
+}
+.data_r ul .color_g {
+    padding-left : 19px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: Gilroy, serif;
+  font-size: 12px;
+    color: rgb(119, 119, 119);
+}
+.data_r ul li:nth-last-of-type(2) {
+    font-family: Gilroy-Bold, serif;
+    font-size : 24px;
+    color: rgb(99, 99, 99);
+}
+.data_r ul li .button {
+    width : 148px;
+    height : 30px;
+    text-transform: uppercase;
+    font-family: OpenSansExtraBold, serif;
+    font-size : 12px;
+}
+/*BASKET END*/
 /*____________________________________________*/
