@@ -405,7 +405,7 @@ function change_visibility (block_close, block_open) {
     document.getElementById(block_open).style.display='none';
     }
 
-    $(function () {
+$(function () {
   $(document).click((e) => {
     const {target} = e;
     if(target.nodeName === 'A' && target.getAttribute('href') === '#') {
