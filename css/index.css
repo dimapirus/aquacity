@@ -1912,3 +1912,152 @@ height: 96px;
 }
 /*BASKET AUTORIZE END*/
 /*____________________________________________*/
+
+
+/*CARD*/
+.card {
+    display: flex;
+    width : 100%;
+    position : relative;
+}
+.card_img {
+    padding : 0 75px;
+    position : relative;
+}
+.card_name {
+    padding : 30px 0;
+    font-family: Gilroy-Bold, serif;
+    font-size : 36px;
+    color: rgb(51, 51, 51);
+}
+.card_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    max-width: 670px;
+}
+.card_price li:nth-of-type(1), .card_price li:nth-of-type(3) {
+    font-family: Gilroy, serif;
+    font-size : 36px;
+    color: rgb(51, 51, 51);
+}
+.card_price li:nth-of-type(3) {
+    font-size : 24px;
+}
+.card_price .number input{
+    margin : 0 7px;
+    text-align: center;
+    width: 60px;
+  height: 26px;
+  border: solid 1px rgb(254, 51, 54);
+}
+.card_button {
+    width : 160px;
+    height : 30px;
+    font-family: OpenSansExtraBold, serif;
+    text-transform: uppercase;
+    font-size : 12px;
+}
+.card_data {
+    padding-top : 45px;
+    font-family: Gilroy, serif;
+    font-size : 14px;
+    color: rgb(51, 51, 51);
+}
+.card_data li {
+    margin-bottom : 10px;
+}
+.card_signs {
+    margin-left: auto;
+}
+.card_signs ul {
+    height: 100%;
+        display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.card_signs ul li{
+    display: flex;
+    justify-content: center;
+    padding-bottom : 31px;
+}
+.card_signs ul li:nth-last-of-type(1) {
+    padding : 0;
+}
+.sign_card {
+    position : absolute;
+    top: 0;
+    right: 0;
+}
+.sign_card_second {
+    right: 100px;
+}
+.card_discount {
+    width: 92px;
+  height: 92px;
+  background-color: rgb(255, 237, 11);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position : absolute;
+    left: 70px;
+    bottom: 60px;
+    font-family: Gilroy-Bold, serif;
+    font-size : 30px;
+    color: rgb(51, 51, 51);
+}
+#tabs {
+    width : 100%;
+}
+#tabs .tab {
+    margin-right : 166px;
+    display: inline-block;
+    text-align: center;
+    padding: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index:5;
+    font-family: Gilroy, serif;
+    font-size : 18px;
+    color: rgb(138, 138, 138);
+    text-transform: uppercase;
+}
+#tabs .tab:nth-of-type(5) {
+    margin-right : 0;
+}
+#tabs .whiteborder {
+   border: 2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #fff;
+    border-radius: 3px 3px 0  0;
+    font-family: Gilroy-Bold, serif;
+    color: rgb(254, 51, 54);
+}
+#tabs .tabContent {
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: -2px;
+    z-index:1;
+    padding: 26px;
+    font-family: Gilroy, serif;
+    font-size : 12px;
+    color: rgb(51, 51, 51);
+}
+#tabs .tabContent p span {
+    display: block;
+    line-height: 1.33;
+}
+#tabs .tabContent p span:nth-of-type(1) {
+    font-family: Gilroy-Bold, serif;
+}
+#tabs .hide {
+    display: none;
+}
+#tabs .show {
+    display: block;
+}
+/*CARD END*/
+/*____________________________________________*/
