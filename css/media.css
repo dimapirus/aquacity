@@ -1,5 +1,33 @@
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1225px)
+{
+    .order_table .table .string li:nth-of-type(3)
+    {
+        min-width : 400px;
+    }
+
+    .data_l ul
+    {
+        width : 50%;
+    }
+
+    .data_l
+    {
+        width : 66.6666%;
+    }
+
+    .data_r
+    {
+        width : 33.3333%;
+    }
+
+    .data_r ul li
+    {
+        margin-left : auto;
+    }
+}
+
 @media only screen and (max-width : 1175px)
 {
     .item_text p, .availability
@@ -29,6 +57,25 @@
     }
 }
 
+@media only screen and (max-width : 1140px)
+{
+    .order_table .table .string li:nth-of-type(3)
+    {
+        min-width    : 300px;
+        padding-left : 15px;
+    }
+
+    .order_table .table .string li:nth-of-type(4)
+    {
+        max-width : 60px;
+    }
+
+    .order_table .table .string li:nth-of-type(2),
+    .order_table .table .string li:nth-of-type(6)
+    {
+        max-width : 74px;
+    }
+}
 
 @media only screen and (max-width : 1120px)
 {
@@ -62,6 +109,11 @@
     .main_bar
     {
         width : calc(100% - 200px);
+    }
+
+    .basket
+    {
+        width : 100%;
     }
 
     .left_bar_first .had_filtr
@@ -159,6 +211,26 @@
     .footer_main ul:nth-of-type(5) li
     {
         padding-left : 35px;
+    }
+
+    .data_l
+    {
+        width : 60%;
+    }
+
+    .data_r
+    {
+        width : 40%;
+    }
+
+    .data_l ul:nth-of-type(1)
+    {
+        width : 60%;
+    }
+
+    .data_l ul:nth-of-type(2)
+    {
+        width : 40%;
     }
 }
 
@@ -292,6 +364,60 @@
     .select_category p select
     {
         width : 150px;
+    }
+
+    .order_table .table .string li:nth-of-type(3)
+    {
+        width     : auto;
+        min-width : 200px;
+    }
+
+    .order_table
+    {
+        font-size : 12px;
+    }
+
+    .number p
+    {
+        width : 45px;
+    }
+
+    .order_table .table .string li:nth-of-type(7),
+    .order_table .table .string li:nth-of-type(8)
+    {
+        max-width : 80px;
+    }
+
+    .order_data
+    {
+        flex-direction : column;
+    }
+
+    .order_data .data_l, .order_data .data_r
+    {
+        width : 100%;
+    }
+
+    .data_l .comments
+    {
+        width : 50%;
+    }
+
+    .order_data .data_r
+    {
+        padding-top : 25px;
+    }
+
+    .order_data .data_r ul li
+    {
+        margin : 0;
+    }
+
+    .order_data .data_r
+    {
+        display         : flex;
+        justify-content : space-between;
+        flex-wrap       : wrap;
     }
 }
 
@@ -508,6 +634,16 @@
     {
         font-size : 16px;
     }
+
+    .order_table .table .string li:nth-of-type(3)
+    {
+        min-width : 175px;
+    }
+
+    .basket
+    {
+        width : 100%;
+    }
 }
 
 
@@ -521,6 +657,16 @@
     .nav_l .tab_none_three
     {
         display : none;
+    }
+
+    .order_table .table .string li:nth-of-type(5)
+    {
+        min-width : 85px;
+    }
+
+    .order_table .table .string li:nth-of-type(3)
+    {
+        min-width : 150px;
     }
 }
 
@@ -954,6 +1100,134 @@
     {
         padding-left : 0;
     }
+
+    .table
+    {
+        display : none;
+    }
+
+    .table_mob
+    {
+        display     : block;
+        padding-top : 15px;
+        margin      : 0 auto;
+    }
+
+    .mobile_good li
+    {
+        max-width      : 530px;
+        margin         : 0 auto;
+        padding-bottom : 15px;
+        display        : flex;
+        align-items    : center;
+        font-family    : Gilroy, serif;
+        font-size      : 16px;
+        color          : rgb(51, 51, 51);
+    }
+
+    .mobile_good li .mob_name
+    {
+        padding-left : 25px;
+        font-family  : Gilroy-Bold, serif;
+    }
+
+    .mobile_good li .article
+    {
+        margin-left : auto;
+    }
+
+    .mobile_good li .mob_price
+    {
+        font-family  : Gilroy-Bold, serif;
+        font-size    : 20px;
+        padding-left : 15px;
+    }
+
+    .mobile_good li .number_mob
+    {
+        padding-top : 10px;
+    }
+
+    .mob_cost_wrap
+    {
+        margin-left : auto;
+    }
+
+    .mobile_good li .mob_good_title
+    {
+        font-size : 12px;
+    }
+
+    .mobile_good .mob_good_wrap
+    {
+        align-items : flex-start;
+    }
+
+    .mobile_good .mob_cost
+    {
+        padding-top : 10px;
+        font-family : Gilroy-Bold, serif;
+        font-size   : 20px;
+    }
+
+    .mobile_good .mob_good_other p
+    {
+        margin-right : 25px;
+    }
+
+    .mobile_good li .mob_discount,
+    .mobile_good li .mob_bonus,
+    .mobile_good li .mob_note
+    {
+        padding-top : 10px;
+        text-align  : center;
+    }
+
+    .table_mob ul
+    {
+        margin-bottom : 15px;
+        border-bottom : 1px solid rgb(51, 51, 51);
+    }
+
+    .table_mob ul:nth-last-of-type(1)
+    {
+        border : none;
+    }
+
+    .mobile_filtr_basket
+    {
+        max-width : 100%;
+    }
+
+    .mobile_filtr_basket #fltr_open, .mobile_filtr_basket #fltr_close
+    {
+        max-width : 100%;
+    }
+
+    .mobile_tyre_basket
+    {
+        margin-left : auto;
+    }
+    .order_data .data_l, .order_data .data_r{
+        flex-direction: column;
+    }
+    .data_l ul:nth-of-type(1), .data_l ul:nth-of-type(2) {
+        width : 100%;
+    }
+    .data_l .comments {
+        width : 100%;
+        max-width: 352px;
+    }
+    .order_data {
+        max-width: 352px;
+        padding-bottom : 35px;
+    }
+    .mobile_good .mob_extra_name {
+        display: none;
+    }
+    .data_r ul .color_g {
+        justify-content: flex-start;
+    }
 }
 
 
@@ -998,6 +1272,24 @@
     {
         max-width : 200px;
     }
+
+    .mobile_tyre_basket
+    {
+        max-width : 100%;
+    }
+
+    .mobile_tyre_basket a
+    {
+        justify-content : center;
+    }
+
+    .mobile_tyre_basket a img
+    {
+        margin-right : 20px;
+    }
+{
+    max-width : 200px;
+}
 
     .mobileHat
     {
@@ -1061,6 +1353,16 @@
     .menu_r
     {
         width : 50%;
+    }
+    .mob_name_none {
+        display: none;
+    }
+    .mobile_good .mob_extra_name {
+        display: block;
+    }
+    .mobile_good .mob_extra_name p {
+        padding-left : 0;
+        padding-top : 10px;
     }
 }
 
@@ -1138,6 +1440,9 @@
         flex      : 0 0 100%;
         max-width : 270px;
         margin    : 0 auto;
+    }
+    .promo input {
+        width : 170px;
     }
 }
 
