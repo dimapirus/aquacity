@@ -446,6 +446,17 @@ function change_visibility( block_close, block_open )
     document.getElementById( block_close ).style.display = 'block';
     document.getElementById( block_open ).style.display = 'none';
 }
+ $(document).ready(function(){
+ $('.link_view').click(function(){
+  $(this).parent().children('div.area_text_hide').toggle('normal');
+  return false;
+ });
+});
+
+jQuery( '.link_view' ).click( function ()
+{
+    jQuery('.area_drop_arrow').toggleClass( 'area_arrow' );
+} );
 
 $( document ).ready( function ()
 {
