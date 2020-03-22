@@ -1525,20 +1525,20 @@ rgb(51, 51, 51);
     justify-content : flex-start;
 }
 
-.basket .nav_l a, .basket .nav_l li
-{
-    width : auto;
-}
+/*.basket .nav_l a, .basket .nav_l li*/
+/*{*/
+/*    width : auto;*/
+/*}*/
 
 .basket .nav_l a
 {
     padding : 0 15px;
 }
 
-.basket .nav_l li
-{
-    margin-right : 30px;
-}
+/*.basket .nav_l li*/
+/*{*/
+/*    margin-right : 30px;*/
+/*}*/
 
 .basket .nav_l li:nth-last-of-type(1)
 {
