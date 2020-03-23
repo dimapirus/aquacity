@@ -2012,6 +2012,9 @@
     .area_banners_r ul li p:nth-of-type(1) img {
         width : 100px;
     }
+    .area_messege .area_textarea {
+        padding-left : 15px;
+    }
 }
 
 

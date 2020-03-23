@@ -2395,12 +2395,14 @@ textarea
     align-items : center;
 }
 
-.area_messege textarea
+.area_messege .area_textarea
 {
-    margin-top : 20px;
+    padding : 35px 0 69px 47px;
     width      : 100%;
-    max-width  : 500px;
     border     : none;
+    font-family: Gilroy, serif;
+    font-size : 14px;
+    color: rgb(51, 51, 51);
 }
 
 .bonus_account
